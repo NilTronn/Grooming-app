@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+}
+
+.app {
+    font-family: Roboto;
+    width: 100%;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}

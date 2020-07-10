@@ -1,0 +1,165 @@
+.header
+    position: relative
+    height: 95vh
+    &:before 
+        width: 50%;
+        height: 100%;
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: radial-gradient(ellipse farthest-corner at 100% 50%,rgba(13,13,13,0.3) 0,rgba(13,13,13,0.67) 50%,#292929 100%)
+
+    &_menu
+        padding: 10px 20px
+        &_left
+            width: 50%
+            display: inline-block
+            vertical-align: middle
+            &_logo
+                vertical-align: middle
+                width: 59px
+                height: 59px
+            &_title
+                margin: 0 61px 0 20px
+                width: 97px
+                line-height: 1.6
+                vertical-align: middle
+                display: inline-block
+        &_right
+            width: 50%
+            display: inline-block
+            vertical-align: middle
+            &_ul
+                float: right
+                list-style-type: none
+                display: flex
+            &_li
+                margin-right: 34px
+        .phone
+            vertical-align: middle
+            display: inline-block
+
+    &_img
+        margin: -79px auto
+        margin-bottom: 0
+        height: 100%
+        width: calc( 100% - 250px )
+        img
+            vertical-align: bottom
+            display: block
+            margin: 0 auto
+            height: 100%
+            position: relative
+        &_wrapper
+            position: absolute
+            top: 15%
+            height: 65vh
+            width: calc( 100% - 250px )
+            padding: 0 60px
+            border-left: none
+            &_border
+                height: 100%
+                border: 4px solid #fff
+                border-left: none
+            &::after
+                content: ''
+                width: 4px
+                height: calc( (90% - 160px)/2 )
+                background-color: #fff
+                position: absolute
+                left: 60px
+                bottom: 0
+            &::before
+                content: ''
+                width: 4px
+                height: calc( (90% - 160px)/2 )
+                background-color: #fff
+                position: absolute
+                left: 60px
+    &_text
+        position: absolute
+        width: 350px
+        padding: 0
+        padding-left: 4px
+        height: 160px
+        left: 0
+        bottom: calc(50% - 80px)
+        h2
+            font-weight: normal
+            letter-spacing: 10px
+            font-size: 30px
+            color: #fff
+            text-transform: uppercase
+        hr
+            margin: 22px 0
+            width: 65px
+            height: 4px
+            background-color: #fff
+        p
+            font-size: 13px
+            line-height: 1.5
+            color: #fff
+            max-height: 75px
+            font-weight: 300
+    &_link
+        cursor: pointer
+        width: 48px
+        height: 48px
+        border: 2px solid #000
+        position: absolute
+        -webkit-border-radius: 100%
+        -moz-border-radius: 100%
+        border-radius: 100%
+        text-decoration: none
+        text-align: center
+        vertical-align: middle
+        color: #000
+        line-height: 40px
+        background: #fff
+        transition: all .5s ease
+        font-weight: 300
+        span
+            font-size: 40px
+            opacity: 1
+        &_block
+            width: 50%
+            height: 100%
+            float: right
+            position: relative
+        &::after
+            width: 38px
+            height: 38px
+            position: absolute
+            left: 2px
+            top: 2px
+            border: 1px solid #000
+            content: ''
+            display: block
+            -webkit-border-radius: 100%
+            -moz-border-radius: 100%
+            border-radius: 100%
+        img
+            position: absolute
+            max-width: 27px
+            top: 0
+            height: auto
+            opacity: 0
+            bottom: 0
+            left: 0
+            right: 0
+            margin: auto
+            transition: all .5s ease
+        &:nth-child(1)
+            left: 4%
+            top: 14%
+        &:nth-child(2)
+            right: 20%
+            top: 20%
+        &:nth-child(3)
+            left: 20%
+            bottom: 14%
+        &:nth-child(4)
+            right: 45%
+            bottom: 5%
