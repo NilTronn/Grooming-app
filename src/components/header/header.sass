@@ -1,0 +1,375 @@
+.header
+    position: relative
+    height: 95vh
+    .main_bg_block
+        position: absolute
+        background: repeat
+        top: 0
+        right: 0
+        width: 50%
+        height: 100%
+        display: block
+        z-index: -5
+        opacity: 0.5
+
+    &:before 
+        z-index: -5
+        width: 50%;
+        height: 100%;
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: radial-gradient(ellipse farthest-corner at 100% 50%,rgba(13,13,13,0.3) 0,rgba(13,13,13,0.67) 50%,#292929 100%)
+    
+    &_menu
+        position: relative
+        padding: 10px 20px
+        &_left
+            color: #fff
+            width: 50%
+            display: inline-block
+            vertical-align: middle
+            &_logo
+                vertical-align: middle
+                width: 59px
+                height: 59px
+            &_title
+                margin: 0 61px 0 20px
+                width: 97px
+                line-height: 1.6
+                vertical-align: middle
+                display: inline-block
+        &_right
+            width: 50%
+            display: inline-block
+            vertical-align: middle
+            &_ul
+                float: right
+                list-style-type: none
+                display: flex
+            &_li
+                margin-right: 34px
+            &_875
+                display: none
+        .phone
+            display: inline-block
+            vertical-align: middle
+
+    &_img
+        margin: -79px auto
+        margin-bottom: 0
+        height: 100%
+        width: calc( 100% - 250px )
+        img
+            vertical-align: bottom
+            display: block
+            margin: 0 auto
+            height: calc(110% - 1px)
+            position: relative
+            z-index: -5
+            top: -8%
+        &_wrapper
+            position: absolute
+            top: 15%
+            height: 65vh
+            width: calc( 100% - 250px )
+            padding: 0 60px
+            border-left: none
+            &_border
+                height: 100%
+                border: 4px solid #fff
+                border-left: none
+            &::after
+                content: ''
+                width: 4px
+                height: calc( (90% - 160px)/2 )
+                background-color: #fff
+                position: absolute
+                left: 60px
+                bottom: 0
+            &::before
+                content: ''
+                width: 4px
+                height: calc( (90% - 160px)/2 )
+                background-color: #fff
+                position: absolute
+                left: 60px
+    &_text
+        position: absolute
+        width: 400px
+        padding: 0
+        padding-left: 4px
+        height: 160px
+        left: -15px
+        bottom: calc(50% - 80px)
+        h2
+            transition: display 5s
+            font-weight: normal
+            letter-spacing: 10px
+            font-size: 30px
+            color: #fff
+            text-transform: uppercase
+        hr
+            transition: display 5s
+            margin: 22px 0
+            width: 65px
+            height: 4px
+            background-color: #fff
+        p
+            transition: display 5s
+            width: 350px
+            font-size: 13px
+            line-height: 1.5
+            color: #fff
+            max-height: 75px
+            font-weight: 300
+        &_block
+            display: inline-block
+            vertical-align: middle
+    &_slider
+        margin-right: 15px
+        display: inline-block
+        vertical-align: middle
+        &_block
+            cursor: pointer
+            position: relative
+            width: 15px
+            height: 15px
+            border-radius: 100%
+            border: 2px solid rgb(255, 255, 255)
+            opacity: 0.7
+            margin-bottom: 10px
+            transition-duration: 0.5s
+            transition-property: opacity, box-shadow
+            &:last-child
+                margin-bottom: 0
+        &_in_block
+            width: 7px
+            height: 7px
+            position: absolute
+            top: 2px
+            left: 2px
+            border-radius: 100%
+            background-color: rgb(255, 255, 255)
+            opacity: 0.7
+            transition-duration: 0.5s
+            transition-property: opacity, box-shadow
+    &_order, &_order_670
+        position: absolute
+        bottom: 35%
+        right: 0
+        background-color: #e3355e
+        color: #ffffff
+        font-size: 14px
+        width: 150px
+        height: 50px
+        border: none
+        text-align: center
+        cursor: pointer
+        transition: opacity .3s
+        &:hover
+            opacity: .7
+    &_order_670
+        display: none
+
+#menuToggle 
+    position: absolute
+    top: 10%
+    left: 10%
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    input 
+        display: flex;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 3;
+        &:checked 
+            & ~ #span1 
+                width: 24px
+                background-color: #0c2461;
+                transform: rotate(45deg) translate(5px);
+            & ~ #span2 
+                position: static
+                width: 24px
+                background-color: #0c2461;
+                transform: rotate(495deg) translate(1px);  
+            & ~ #span3 
+                background-color: #0c2461;
+                transform: rotate(45deg);
+                opacity: 0;
+    span
+        width: 20px;
+        height: 2px;
+        margin-bottom: 6px;
+        background: #fff;
+        border-radius: 4px;
+        -webkit-transition: all .5s cubic-bezier(.08,.81,.87,.71);
+        -moz-transition: all .5s cubic-bezier(.08,.81,.87,.71);
+        -ms-transition: all .5s cubic-bezier(.08,.81,.87,.71);
+        -o-transition: all .5s cubic-bezier(.08,.81,.87,.71);
+        transition: all .5s cubic-bezier(.08,.81,.87,.71);
+    #span1 
+        transform-origin: 4px 0px;
+    #span2
+        width: 13px
+        position: relative
+        right: 4px
+    #span3 
+        margin-bottom: 0
+        transform-origin: bottom right;
+
+@media screen and ( max-width: 875px )
+    .header
+        &_menu
+            &_left
+                .phone
+                    display: none
+            &_right
+                &_875
+                    display: flex
+                    justify-content: flex-end
+                    align-items: center
+                .phone
+                    display: block
+                    margin-right: 20px
+                    div
+                        color: #e3355e
+                &_ul
+                    display: none
+                &_menu
+                    position: relative
+                    // vertical-align: middle
+                    // display: inline-block
+                    // padding: 11px
+                    // padding-top: 12px
+                    height: 40px
+                    width: 40px
+                    background-color: #e3355e
+                    border-radius: 100%
+                    float: right
+            &_fade_ul
+                opacity: 0
+                z-index: 1
+                display: none
+                position: fixed
+                right: 20px
+                top: 20px
+                width: 320px
+                max-width: 70vw
+                height: calc( 100vh - 40px )
+                background-color: #887676
+        &_img
+            &_wrapper
+                &_border
+                    display: none
+                &::before
+                    content: none
+                &::after
+                    content: none
+            width: 90vw
+        &_text
+            &_block
+                padding: 10px
+                border-radius: 5px
+                background-color: rgba(70, 65, 65, 0.7)
+                max-width: 38vw
+                height: auto
+            height: auto
+            width: auto
+            top: 18%
+            p
+                width: auto
+                max-height: none
+        &_order
+            right: -20vw
+
+@media screen and ( max-width: 670px )
+    div.app
+        padding: 3px
+    .header
+        max-height: 85vw
+        &_text
+            width: 80vw
+            left: 5vw
+            h2
+                font-size: 20px
+                letter-spacing: 5px
+            p
+                font-size: 12px
+            &_block
+                width: 80vw
+                max-width: none
+            hr
+                margin: 10px 0 
+        &_menu
+            display: flex
+            justify-content: space-between
+            &_left
+                display: block
+                width: auto
+                &_title
+                    margin-right: 0
+            &_right
+                padding-top: 9px
+                display: block
+                width: auto
+            &_fade_ul
+                right: 7px
+                top: 7px
+                height: calc( 100vh - 14px )
+        .phone
+            img
+                margin-right: 4px
+            margin-right: 10px
+            div
+                font-size: 14px
+                font-weight: normal
+        &_slider
+            display: flex
+            margin: 0 0 10px 10px
+            &_block
+                margin: 0 10px 0 0
+        &_order
+            display: none
+            &_670
+                display: block
+                position: absolute
+                width: 90%
+                bottom: -23%
+                right: 5%
+                border-radius: 3px
+
+@media screen and ( max-width: 420px )
+    .header
+        &_menu
+            &_left
+                &_title
+                    display: none
+        &_text
+            display: none
+        &_order
+            display: block
+            width: 90vw
+            right: 0
+            bottom: 45%
+        &_img_wrapper
+            padding: 0
+            width: 90vw
+            height: 100%
+
+@media screen and ( max-width: 350px )
+    .header
+        .phone
+            div
+                font-size: 12px
