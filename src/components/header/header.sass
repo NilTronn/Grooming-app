@@ -173,6 +173,8 @@
             opacity: .7
     &_order_670
         display: none
+        &:hover
+            opacity: 1
 
 #menuToggle 
     position: absolute
@@ -197,22 +199,22 @@
         &:checked 
             & ~ #span1 
                 width: 24px
-                background-color: #0c2461;
+                background-color: #fff;
                 transform: rotate(45deg) translate(5px);
             & ~ #span2 
                 position: static
                 width: 24px
-                background-color: #0c2461;
+                background-color: #fff;
                 transform: rotate(495deg) translate(1px);  
             & ~ #span3 
-                background-color: #0c2461;
+                background-color: #fff;
                 transform: rotate(45deg);
                 opacity: 0;
     span
         width: 20px;
         height: 2px;
         margin-bottom: 6px;
-        background: #fff;
+        background-color: #e0dede;
         border-radius: 4px;
         -webkit-transition: all .5s cubic-bezier(.08,.81,.87,.71);
         -moz-transition: all .5s cubic-bezier(.08,.81,.87,.71);
@@ -268,7 +270,7 @@
                 width: 320px
                 max-width: 70vw
                 height: calc( 100vh - 40px )
-                background-color: #887676
+                background-color: rgb(51, 51, 51)
         &_img
             &_wrapper
                 &_border
@@ -342,6 +344,8 @@
                 margin: 0 10px 0 0
         &_order
             display: none
+            &:hover
+                opacity: 1
             &_670
                 display: block
                 position: absolute
@@ -373,3 +377,8 @@
         .phone
             div
                 font-size: 12px
+
+
+.active_list_item
+    opacity: 1
+    box-shadow: 0 0 10px
